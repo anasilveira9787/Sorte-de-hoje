@@ -3,7 +3,7 @@ const screen2 = document.querySelector(".screen2")
 const fortuneCookie = document.querySelector("#fortuneCookie")
 const tryAgain = document.querySelector("#tryAgain")
 
-const luck = [
+const fortune = [
     "O aprendizado é como o horizonte: não há limites.",
     "Não há que ser forte, há que ser flexível.",
     "Limitações são fronteiras criadas apenas pela nossa mente.",
@@ -19,7 +19,6 @@ const luck = [
 
 
 
-//eventos
 
 fortuneCookie.addEventListener('click', handleTryClick)
 tryAgain.addEventListener('click', handleResetClick)
@@ -34,18 +33,25 @@ document.addEventListener('keydown', function(e) {
     }
 )
 
-// funções
-function handleTryClick(event) {
-    let allLuckies = luck.length
-    let randomNumber = Math.floor(Math.random() * allLuckies)  
 
-        toggleScreen()
-        screen2.querySelector("h2").innerText = `${luck[randomNumber]}`
-    }
+
+function handleTryClick(event) {
+    toggleScreen()
+    pickFortune()
+    
+}
 
 function handleResetClick() {
-    toggleScreen()
+toggleScreen()
 }
+
+
+function pickFortune() {
+    let allFortunes = fortune.length
+    let randomNumber = Math.floor(Math.random() * allFortunes)  
+    screen2.querySelector("h2").innerText = `${fortune[randomNumber]}`
+}
+
 
 function toggleScreen() {
     screen2.classList.toggle("hide")
