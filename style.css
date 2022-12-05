@@ -9,12 +9,13 @@
 }
 
 body {
-    background: linear-gradient(45deg, #190361 0%, #5d0598 100%);
+    background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
     font-size: 1.6rem;
     display: grid;
     place-items: center;
     height: 100vh;
-    }
+  }
+  
 
 body,
 button {
